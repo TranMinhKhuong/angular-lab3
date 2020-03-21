@@ -5,6 +5,6 @@
 <h2>Danh sách bác sỹ</h2>
 <p *ngFor="let doc of doctors">
   {{doc.id}} - {{doc.name | titlecase}} 
-  - {{doc.gender | convertgender}}
+  - {{doc.gender}}
   - {{doc.birthDate | date: "dd/MM/yyyy"}}
 </p>
