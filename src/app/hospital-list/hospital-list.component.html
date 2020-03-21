@@ -1,5 +1,10 @@
 <div *ngFor="let hos of hospitals">
-  <p>{{hos.name}} - {{hos.address}}</p>
+  <p>
+    <a [routerLink]="['hospital-detail/', hos.id]">
+    {{hos.name}} - {{hos.address}}
+    </a>
+  </p>
+  <a [routerLink]="['edit-hospital/', hos.id]">Sửa</a>
 </div>
 
 <h2>Danh sách bác sỹ</h2>
