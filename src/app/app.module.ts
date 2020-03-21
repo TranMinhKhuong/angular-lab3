@@ -15,7 +15,7 @@ import { HospitalFormComponent } from './hospital-form/hospital-form.component';
     BrowserModule, FormsModule,
     RouterModule.forRoot([
       {path: '', component: HospitalListComponent},
-      {path: 'hospital-detail', component: HospitalDetailComponent},
+      {path: 'hospital-detail/:hospitalId', component: HospitalDetailComponent},
       {path: 'add-hospital', component: HospitalFormComponent},
       {path: 'edit-hospital/:hospitalId', component: HospitalFormComponent}
     ])
