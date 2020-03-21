@@ -6,8 +6,8 @@ import {RouterModule} from '@angular/router'
 import { AppComponent } from './app.component';
 import { HospitalListComponent } from './hospital-list/hospital-list.component';
 import { ConvertGenderPipe } from './convert-gender.pipe';
-import { HospitalDetailComponent } from './hospital-detail/hospital-detail.component';
-import { HospitalFormComponent } from './hospital-form/hospital-form.component';
+import {HospitalDetailComponent} from './hospital-detail/hospital-detail.component';
+import {HospitalFormComponent} from './hospital-form/hospital-form.component';
 
 
 @NgModule({
