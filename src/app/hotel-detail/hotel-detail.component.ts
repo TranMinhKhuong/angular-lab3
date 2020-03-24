@@ -26,4 +26,14 @@ export class HotelDetailComponent implements OnInit {
     })
   }
 
+  removeHotel(){
+    let conf = confirm('Bạn chắc chắn muốn xóa khách sạn này?');
+    if(conf){
+      this.hotelService.removeHotelById(this.hotelData.id).subscribe(data => {
+        this.route.navigate(['']);
+      });
+    }
+    
+  }
+
 }
