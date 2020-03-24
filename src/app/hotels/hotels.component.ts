@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {HotelService} from '../hotel.service';
 
 @Component({
   selector: 'app-hotels',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HotelsComponent implements OnInit {
 
-  constructor() { }
+  hotels = [];
+  constructor(private hotelService: HotelService) { }
 
+  // tự động đc chạy 1 lần khi mình genarate
   ngOnInit() {
+    this.hotelService.getHotels().subscribe(data => {
+      console.log(data);
+      this.hotels = data;
+    });
   }
 
 }
