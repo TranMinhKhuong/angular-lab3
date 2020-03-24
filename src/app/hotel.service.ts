@@ -9,7 +9,7 @@ export class HotelService {
   constructor(private http:HttpClient) { }
 
   // observalbe cho phép chờ cái th server bên kia trả về request cho mình để fill dữ liệu ra ngoài màn hình
-  getHotel():Observable<any>{
+  getHotels():Observable<any>{
     return this.http.get<any>(apiUrl);
   }
 }
