@@ -12,4 +12,9 @@ export class HotelService {
   getHotels():Observable<any>{
     return this.http.get<any>(apiUrl);
   }
+
+  getHotelById(hotelId): Observable<any>{
+    let url = `${apiUrl}/${hotelId}`;
+    return this.http.get<any>(url);
+  }
 }

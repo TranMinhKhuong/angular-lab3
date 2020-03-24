@@ -10,15 +10,17 @@ import {ConvertGenderPipe} from
 './convert-gender.pipe'
 import { HttpClientModule } from '@angular/common/http';
 import { HotelService } from './hotel.service';
+import { HotelDetailComponent } from './hotel-detail/hotel-detail.component';
 
 @NgModule({
   imports:      [ 
     BrowserModule, FormsModule,HttpClientModule,
     RouterModule.forRoot([
-      {path:'',component: HotelsComponent}
+      {path:'',component: HotelsComponent},
+      {path:'detail/:hotelId',component: HotelDetailComponent}
     ])
   ],
-  declarations: [ AppComponent,ConvertGenderPipe, HotelsComponent ],
+  declarations: [ AppComponent,ConvertGenderPipe, HotelsComponent, HotelDetailComponent ],
   bootstrap:    [ AppComponent ],
   providers: [HotelService]
 })
